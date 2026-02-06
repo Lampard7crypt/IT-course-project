@@ -44,6 +44,32 @@ body.light-mode {
     font-weight: 600;
 }
 
+.cookie-container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2f3640;
+  color: #ffffff;
+  padding: 15px 30px;
+  display: none; /* Hidden by default */
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+  font-family: sans-serif;
+}
+
+.cookie-btn {
+  background: #e1b12c;
+  border: 0;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-left: 20px;
+}
+
 #darkModeToggle {
     border:none;
     background: transparent;

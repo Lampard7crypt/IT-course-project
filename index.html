@@ -15,8 +15,8 @@
             <ul>
                 <li><input type="text" id="search-bar" placeholder="Search e.g. bmw" onkeyup="searchBar()"></li>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="privacy.html">Privacy Policy</a></li>
+                <li><a href="#contact">Contact</a></li>
                 <li id="dropdown">
                     <select name="Cars" id="cars-filter">
                         <option value="all" selected>All</option>
@@ -25,10 +25,18 @@
                         <option value="bmw" >BMW</option>
                         <option value="mercedes" >Mercedes</option>
                 </select></li>
+                <li><a href="register.html">Register</a></li>
                 <li style="float:right;cursor:pointer;border:none;"><button  id="darkModeToggle">🌙 Dark Mode</button></li>
             </ul>
         </nav>
     </header>
+    <div id="cookie-banner" class="cookie-container">
+        <p>
+        We use cookies to improve your experience. By using our site, you agree to our 
+            <a href="/privacy-policy">Privacy Policy</a>
+        </p>
+            <button id="accept-cookies" class="cookie-btn">Accept</button>
+    </div>
     <main id="main">
         <div class="car-card" data-brand="bmw">
             <img src="cars/bmw_mu.jpeg" alt="Image of BMW M6"><p>BMW M6: Ksh 10,000,000</p>
@@ -103,6 +111,9 @@
             <img src="cars/toyota_sienna.jpg" alt="Image of Toyota Sienna"><p>Toyota Sienna: Ksh 3,200,000</p>
         </div>
     </main>
+    <div>
+        
+    </div>
     <script src="index.js"></script>
 </body>
 </html>

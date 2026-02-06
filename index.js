@@ -16,6 +16,7 @@ function searchBar() {
     }
 }
 
+
 function toggleDarkMode() {
     const body = document.body;
     const darkModeBtn = document.getElementById('darkModeToggle');
@@ -27,6 +28,7 @@ function toggleDarkMode() {
     }
 }
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const searchInput = document.getElementById('search-bar');
     if (searchInput) searchInput.addEventListener('input', searchBar);
@@ -34,6 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkBtn = document.getElementById('darkModeToggle');
     if (darkBtn) darkBtn.addEventListener('click', toggleDarkMode);
 });
+
 
 const filterDropdown = document.getElementById('cars-filter');
 const carItems = document.querySelectorAll('.car-card');
@@ -51,3 +54,17 @@ filterDropdown.addEventListener('change', function() {
     }
   });
 });
+
+
+const cookieBanner = document.getElementById("cookie-banner");
+const acceptBtn = document.getElementById("accept-cookies");
+
+if (!localStorage.getItem("cookieAccepted")) {
+  cookieBanner.style.display = "flex";
+}
+
+acceptBtn.addEventListener("click", () => {
+  localStorage.setItem("cookieAccepted", "true");
+  cookieBanner.style.display = "none";
+});
+
