@@ -2,6 +2,12 @@
     box-sizing: border-box;
 }
 
+@media screen and (max-width:600px) {
+    #navbar {
+        font-size: small;
+    }
+}
+
 body.dark-mode {
     background-color: hsl(0, 1%, 14%);
     color:hsl(0, 18%, 85%);
@@ -129,4 +135,13 @@ nav li:last-child{
 
 nav ul li:first-child:hover, #dropdown {
     border:none;
+}
+
+a {
+    text-decoration: none;
+    color:rgb(95, 95, 241);
+}
+
+a:visited {
+    color: rgb(99, 99, 179);
 }
