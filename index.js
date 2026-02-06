@@ -1,7 +1,6 @@
 
 function searchBar() {
-    const input = document.getElementById('search-bar');
-    const query = input.value.toLowerCase();
+    const input = document.getElementById('search-bar').value.toLowerCase();
 
     const main = document.getElementById('main');
     const items = main.getElementsByClassName('car-card');
@@ -9,7 +8,7 @@ function searchBar() {
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
         const text = (item.textContent || item.innerText || '').toLowerCase();
-        if (query === '' || text.includes(query)) {
+        if (input === '' || text.includes(input)) {
             item.classList.remove('hidden');
         } else {
             item.classList.add('hidden');
@@ -34,4 +33,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const darkBtn = document.getElementById('darkModeToggle');
     if (darkBtn) darkBtn.addEventListener('click', toggleDarkMode);
+});
+
+const filterDropdown = document.getElementById('cars-filter');
+const carItems = document.querySelectorAll('.car-card');
+
+filterDropdown.addEventListener('change', function() {
+  const selectedValue = this.value;
+
+  carItems.forEach(item => {
+    const itemBrand = item.getAttribute('data-brand');
+
+    if (selectedValue === "all" || itemBrand === selectedValue) {
+      item.style.display = "block"; 
+    } else {
+      item.style.display = "none";
+    }
+  });
 });

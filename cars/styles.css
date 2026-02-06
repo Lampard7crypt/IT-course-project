@@ -44,6 +44,17 @@ body.light-mode {
     font-weight: 600;
 }
 
+#darkModeToggle {
+    border:none;
+    background: transparent;
+    cursor: pointer;
+}
+
+#darkModeToggle:hover {
+    background: #a5caea;
+    border-radius: 5px;
+}
+
 .hidden {
     display: none;
 }
@@ -83,8 +94,13 @@ nav ul li{
 
 nav ul li a {
     text-decoration: none;
+    color: black;
 }
 
 nav li:last-child{
     margin-left: auto;
+}
+
+nav ul li:first-child:hover, #dropdown {
+    border:none;
 }
