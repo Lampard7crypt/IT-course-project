@@ -1,29 +1,15 @@
-function filterItems() {
-    const input = document.getElementById('searchInput').value.toLowerCase();
 
-    const items = document.getElementById('itemList').getElementsByTagName('li');
+function searchBar() {
+    const input = document.getElementById('search-bar');
+    const query = input.value.toLowerCase();
+
+    const main = document.getElementById('main');
+    const items = main.getElementsByClassName('car-card');
 
     for (let i = 0; i < items.length; i++) {
         const item = items[i];
-        const text = item.textContent || item.innerText;
-
-        if (text.toLowerCase().includes(input)) {
-            item.classList.remove('hidden'); // Show the item
-        } else {
-            item.classList.add('hidden'); // Hide the item
-        }
-    }
-}
-
-function searchBar() {
-    const input = document.getElementById('search-bar').value.toLoweCase();
-    const items = document.getElementsById('main').getElementsByClassName('car-card');
-
-    for (let i=0;i<items.length;i++) {
-        const item = items[i];
-        const text = item.textContent || item.innerText;
-
-        if (text.toLowerCase().includes(input)) {
+        const text = (item.textContent || item.innerText || '').toLowerCase();
+        if (query === '' || text.includes(query)) {
             item.classList.remove('hidden');
         } else {
             item.classList.add('hidden');
@@ -41,4 +27,11 @@ function toggleDarkMode() {
         darkModeBtn.textContent = '🌙 Dark Mode';
     }
 }
-document.getElementById('darkModeToggle').addEventListener('click', toggleDarkMode);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const searchInput = document.getElementById('search-bar');
+    if (searchInput) searchInput.addEventListener('input', searchBar);
+
+    const darkBtn = document.getElementById('darkModeToggle');
+    if (darkBtn) darkBtn.addEventListener('click', toggleDarkMode);
+});
