@@ -12,14 +12,48 @@ body.light-mode {
     color:hsl(0, 0%, 2%);
 }
 
-
-
 .car-card{
-    display:inline-block;
-    margin: 5px;
-    height: 200px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:space-between;
+    width:220px;
+    height:260px;
+    margin: 8px;
     border:2px solid hsl(240, 60%, 62%);
     border-radius: 10px;
+    overflow: hidden;
+    padding: 8px;
+    background-color: #ffffff22;
+}
+
+.car-card img {
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius: 8px;
+    display:block;
+}
+
+.car-card p {
+    margin: 8px 0 0;
+    height:40px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+    font-weight: 600;
+}
+
+.hidden {
+    display: none;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0;
+    padding: 10px;
 }
 
 nav ul {
@@ -27,7 +61,6 @@ nav ul {
     display: flex;
     margin: 0;
     padding: 0;
-
 }
 
 .navbar {
@@ -54,44 +87,4 @@ nav ul li a {
 
 nav li:last-child{
     margin-left: auto;
-}
-/* Here here */
-
-.container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    width: 300px;
-}
-
-#searchInput {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-#itemList {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-
-#itemList li {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-    cursor: pointer;
-    transition: background-color 0.2s;
-}
-
-#itemList li:hover {
-    background-color: #f1f1f1;
-}
-
-/* The class toggled by JavaScript */
-.hidden {
-    display: none;
 }
