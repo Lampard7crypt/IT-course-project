@@ -18,7 +18,7 @@ body.light-mode {
     color:hsl(0, 0%, 2%);
 }
 
-.car-card{
+.car-card {
     display:flex;
     flex-direction:column;
     align-items:center;
@@ -145,3 +145,4 @@ a {
 a:visited {
     color: rgb(99, 99, 179);
 }
+
